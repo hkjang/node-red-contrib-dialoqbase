@@ -1,0 +1,727 @@
+[
+  {
+    "id": "974ef97e29b8dfe7",
+    "type": "inject",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 120,
+    "y": 100,
+    "wires": [
+      [
+        "f8e6255c153cd750"
+      ]
+    ]
+  },
+  {
+    "id": "3906d0138d5217d0",
+    "type": "dialoqbase",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "api": "",
+    "creds": "7192c7d6932d1260",
+    "x": 670,
+    "y": 100,
+    "wires": [
+      [
+        "b541d4a0bf30a452"
+      ]
+    ]
+  },
+  {
+    "id": "f8e6255c153cd750",
+    "type": "function",
+    "z": "d8a639f3ae5d2614",
+    "name": "set api and params - get bot all",
+    "func": "msg.api = 'bot';\n// msg.method = 'get' // get, post, put, delete, default:get\nmsg.params ={\n    \n}\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 350,
+    "y": 100,
+    "wires": [
+      [
+        "3906d0138d5217d0"
+      ]
+    ]
+  },
+  {
+    "id": "b541d4a0bf30a452",
+    "type": "debug",
+    "z": "d8a639f3ae5d2614",
+    "name": "debug 1",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 820,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "5a3b6c53d68c1ffb",
+    "type": "inject",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 120,
+    "y": 180,
+    "wires": [
+      [
+        "4db0ce257552b8c7"
+      ]
+    ]
+  },
+  {
+    "id": "f19a38f3bd0903d4",
+    "type": "dialoqbase",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "api": "",
+    "creds": "7192c7d6932d1260",
+    "x": 670,
+    "y": 180,
+    "wires": [
+      [
+        "46c21585c67a8301"
+      ]
+    ]
+  },
+  {
+    "id": "4db0ce257552b8c7",
+    "type": "function",
+    "z": "d8a639f3ae5d2614",
+    "name": "set api and params - udpate bot",
+    "func": "msg.api = 'bot/clu9heh7z0007x0old42stm20'; // ${botId}/update\n\n// msg.method = 'post' // get, post, put, delete, default:get\nmsg.params ={\n    \n}\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 350,
+    "y": 180,
+    "wires": [
+      [
+        "f19a38f3bd0903d4"
+      ]
+    ]
+  },
+  {
+    "id": "46c21585c67a8301",
+    "type": "debug",
+    "z": "d8a639f3ae5d2614",
+    "name": "debug 3",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 820,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "d1a0d86aa016cb4a",
+    "type": "inject",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 120,
+    "y": 220,
+    "wires": [
+      [
+        "d5a44a9e6e53125a"
+      ]
+    ]
+  },
+  {
+    "id": "cc11c74c7589fc9a",
+    "type": "dialoqbase",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "api": "",
+    "creds": "7192c7d6932d1260",
+    "x": 670,
+    "y": 220,
+    "wires": [
+      [
+        "590575bdafc6be49"
+      ]
+    ]
+  },
+  {
+    "id": "d5a44a9e6e53125a",
+    "type": "function",
+    "z": "d8a639f3ae5d2614",
+    "name": "set api and params - delete bot",
+    "func": "msg.api = 'bot'; // ${botId}\nmsg.method = 'delete' // get, post, put, delete, default:get\nmsg.params ={\n    \n}\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 350,
+    "y": 220,
+    "wires": [
+      [
+        "cc11c74c7589fc9a"
+      ]
+    ]
+  },
+  {
+    "id": "590575bdafc6be49",
+    "type": "debug",
+    "z": "d8a639f3ae5d2614",
+    "name": "debug 4",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 820,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "db5f445e36c1df63",
+    "type": "inject",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 120,
+    "y": 140,
+    "wires": [
+      [
+        "ebbbed80ce4067a6"
+      ]
+    ]
+  },
+  {
+    "id": "cd899ea9dcb6f1c0",
+    "type": "dialoqbase",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "api": "",
+    "creds": "7192c7d6932d1260",
+    "x": 670,
+    "y": 140,
+    "wires": [
+      [
+        "f1ddfd8e7640d400"
+      ]
+    ]
+  },
+  {
+    "id": "ebbbed80ce4067a6",
+    "type": "function",
+    "z": "d8a639f3ae5d2614",
+    "name": "set api and params - get 1 bot",
+    "func": "msg.api = 'bot/clu9heh7z0007x0old42stm20';// bot/${botId}\n\n// msg.method = 'post' // get, post, put, delete, default:get\nmsg.params ={\n    \n}\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 350,
+    "y": 140,
+    "wires": [
+      [
+        "cd899ea9dcb6f1c0"
+      ]
+    ]
+  },
+  {
+    "id": "f1ddfd8e7640d400",
+    "type": "debug",
+    "z": "d8a639f3ae5d2614",
+    "name": "debug 5",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 820,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "56109360852f93c8",
+    "type": "inject",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 120,
+    "y": 60,
+    "wires": [
+      [
+        "a10dac932dd1d4b2"
+      ]
+    ]
+  },
+  {
+    "id": "5510e1170e18c888",
+    "type": "dialoqbase",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "api": "",
+    "creds": "7192c7d6932d1260",
+    "x": 670,
+    "y": 60,
+    "wires": [
+      [
+        "d89e115857477b77"
+      ]
+    ]
+  },
+  {
+    "id": "a10dac932dd1d4b2",
+    "type": "function",
+    "z": "d8a639f3ae5d2614",
+    "name": "set api and params - create bot",
+    "func": "msg.api = 'bot';\nmsg.method = 'post' // get, post, put, delete, default:get\nmsg.params = {\n    name: \"Test Bot 2\",\n    model: \"claude-3-opus-20240229\",\n    embedding: \"nomic-ai/nomic-embed-text-v1.5\"\n}\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 350,
+    "y": 60,
+    "wires": [
+      [
+        "5510e1170e18c888"
+      ]
+    ]
+  },
+  {
+    "id": "d89e115857477b77",
+    "type": "debug",
+    "z": "d8a639f3ae5d2614",
+    "name": "debug 6",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 820,
+    "y": 60,
+    "wires": []
+  },
+  {
+    "id": "d5906cbaa95431c0",
+    "type": "inject",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 120,
+    "y": 280,
+    "wires": [
+      [
+        "d5b7fae666f27cf1"
+      ]
+    ]
+  },
+  {
+    "id": "5f1f248f045f2d74",
+    "type": "dialoqbase",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "api": "",
+    "creds": "7192c7d6932d1260",
+    "x": 670,
+    "y": 280,
+    "wires": [
+      [
+        "ad02e4ef36eadc80"
+      ]
+    ]
+  },
+  {
+    "id": "d5b7fae666f27cf1",
+    "type": "function",
+    "z": "d8a639f3ae5d2614",
+    "name": "set api and params - add 1 datasource",
+    "func": "msg.api = 'bot/clu9heh7z0007x0old42stm20/source/bulk';// bot/${botId}/source/bulk\nmsg.api = 'bot/clu9heh7z0007x0old42stm20/source';// bot/${botId}/source\n\nmsg.method = 'post' // get, post, put, delete, default:get\nmsg.params = {\n    \"type\":\"text\",\n    \"content\":\"tetraesfsadfasdfsad\\n\",\n    \"model\":\"gpt-3.5-turbo-dbase\",\n    \"embedding\":\"dialoqbase_eb_text-embedding-ada-002\"\n    }\n\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 370,
+    "y": 280,
+    "wires": [
+      [
+        "5f1f248f045f2d74"
+      ]
+    ]
+  },
+  {
+    "id": "ad02e4ef36eadc80",
+    "type": "debug",
+    "z": "d8a639f3ae5d2614",
+    "name": "debug 7",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 820,
+    "y": 280,
+    "wires": []
+  },
+  {
+    "id": "a415c7ce3fa99a89",
+    "type": "inject",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 120,
+    "y": 420,
+    "wires": [
+      [
+        "1d4ffa8e52a538f0"
+      ]
+    ]
+  },
+  {
+    "id": "9e8f58a21252769e",
+    "type": "dialoqbase",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "api": "",
+    "creds": "7192c7d6932d1260",
+    "x": 670,
+    "y": 420,
+    "wires": [
+      [
+        "b6133cf2709fad79"
+      ]
+    ]
+  },
+  {
+    "id": "1d4ffa8e52a538f0",
+    "type": "function",
+    "z": "d8a639f3ae5d2614",
+    "name": "set api and params - delete datasource of bot",
+    "func": "// bot/${botId}/source/${botDataSource}\nmsg.api = 'bot/clu9heh7z0007x0old42stm20/source/clu9ih2fz0009x0ol9nkmkou4';\n\nmsg.method = 'delete' // get, post, put, delete, default:get\nmsg.params = {}\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 390,
+    "y": 420,
+    "wires": [
+      [
+        "9e8f58a21252769e"
+      ]
+    ]
+  },
+  {
+    "id": "b6133cf2709fad79",
+    "type": "debug",
+    "z": "d8a639f3ae5d2614",
+    "name": "debug 8",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 820,
+    "y": 420,
+    "wires": []
+  },
+  {
+    "id": "085c0428133578c7",
+    "type": "inject",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 120,
+    "y": 320,
+    "wires": [
+      [
+        "17e91a710c598a7c"
+      ]
+    ]
+  },
+  {
+    "id": "c7695b24fccf791b",
+    "type": "dialoqbase",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "api": "",
+    "creds": "7192c7d6932d1260",
+    "x": 670,
+    "y": 320,
+    "wires": [
+      [
+        "6502f7c943ca9d03"
+      ]
+    ]
+  },
+  {
+    "id": "17e91a710c598a7c",
+    "type": "function",
+    "z": "d8a639f3ae5d2614",
+    "name": "set api and params - refresh datasource",
+    "func": "msg.api = 'bot/clu9heh7z0007x0old42stm20/source/clu9iqh0x000fx0ol1fpcsgwp/refresh'\n\nmsg.method = 'post' // get, post, put, delete, default:get\nmsg.params = {\n        id : \"clu9heh7z0007x0old42stm20\"\n    }\n\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 380,
+    "y": 320,
+    "wires": [
+      [
+        "c7695b24fccf791b"
+      ]
+    ]
+  },
+  {
+    "id": "6502f7c943ca9d03",
+    "type": "debug",
+    "z": "d8a639f3ae5d2614",
+    "name": "debug 9",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 820,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "d0482520f3037cb5",
+    "type": "inject",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 120,
+    "y": 500,
+    "wires": [
+      [
+        "5e8341b13467a460"
+      ]
+    ]
+  },
+  {
+    "id": "f1d3af67a255fecd",
+    "type": "dialoqbase",
+    "z": "d8a639f3ae5d2614",
+    "name": "",
+    "api": "",
+    "creds": "7192c7d6932d1260",
+    "x": 670,
+    "y": 500,
+    "wires": [
+      [
+        "ff6c2e871b5a0df0"
+      ]
+    ]
+  },
+  {
+    "id": "5e8341b13467a460",
+    "type": "function",
+    "z": "d8a639f3ae5d2614",
+    "name": "set api and params - chat bot",
+    "func": "//  ${botId}/chat\nmsg.api = 'bot/cltrpg5cm0001qhjwpa7blvhf/chat';\nmsg.method = 'post' // get, post, put, delete, default:get\nmsg.params = {\n    message: \"Hello tell me a joke\",\n    stream: false,\n    history: []\n}\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 340,
+    "y": 500,
+    "wires": [
+      [
+        "f1d3af67a255fecd"
+      ]
+    ]
+  },
+  {
+    "id": "ff6c2e871b5a0df0",
+    "type": "debug",
+    "z": "d8a639f3ae5d2614",
+    "name": "debug 10",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 820,
+    "y": 500,
+    "wires": []
+  },
+  {
+    "id": "7192c7d6932d1260",
+    "type": "dialoqbaseApiKey",
+    "name": "58.140.86.163"
+  }
+]

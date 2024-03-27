@@ -1,0 +1,45 @@
+{
+  "name": "node-red-contrib-dialoqbase",
+  "version": "1.0.0",
+  "description": "Node-RED node for dialoqbase",
+  "main": "node.js",
+  "scripts": {
+    "test": "mocha \"test/**/*_spec.js\" --timeout 3000"
+  },
+  "node-red": {
+    "nodes": {
+      "dialoqbase": "node.js"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/hkjang/node-red-contrib-dialoqbase/issues"
+  },
+  "homepage": "https://github.com/hkjang/node-red-contrib-dialoqbase#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hkjang/node-red-contrib-dialoqbase.git"
+  },
+  "keywords": [
+    "node-red-contrib-contribgen",
+    "node-red",
+    "dialoqbase",
+    "chatbot",
+    "AI",
+    "search api",
+    "AI 검색",
+    "Completion",
+    "image generation",
+    "Text Embeddings",
+    "Fine tunes",
+    "Moderations",
+    "ChatGPT",
+    "Ollama",
+    "LLM",
+    "Local LLM",
+    "nodejs"
+  ],
+  "dependencies": {
+    "axios": "^1.6.8"
+  },
+  "license": "MIT"
+}

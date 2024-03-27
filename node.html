@@ -1,0 +1,95 @@
+<script type="text/html" data-template-name="dialoqbase">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span
+                data-i18n="node-red:common.label.name"></span></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]node-red:common.label.name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-creds"> <i class="fa fa-key fa-fw"></i> API key</span></label>
+        <input type="text" id="node-input-creds">
+    </div>
+    <div class="form-row"><label for="node-input-api"><i class="fa"></i> <span
+            data-i18n="dialoqbase.label.api"></span> </label> <input type="text"
+                                                                        id="node-input-api"
+                                                                        data-i18n="[placeholder]dialoqbase.desc.api">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="dialoqbase">
+    <p>Summary of the node.</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload<span class="property-type">object</span></dt>
+        <dd>Explanation of payload.</dd>
+        <dt class="optional">topic <span class="property-type">string</span></dt>
+        <dd>Explanation of topic.</dd>
+    </dl>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload<span class="property-type">object</span></dt>
+        <dd>Explanation of payload.</dd>
+        <dt class="optional">topic<span class="property-type">string</span></dt>
+        <dd>Explanation of topic.</dd>
+    </dl>
+    <h3>Details</h3>
+    <p>Explanation of the details.</p>
+    <p><b>Note</b>: Note of the node.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('dialoqbase', {
+        color: '#ffffff',
+        category: 'function',
+        defaults: {
+            name: {value: ''},
+            api: {value: "", required: false},
+            creds: {
+                value: "",
+                type: "dialoqbaseApiKey"
+            },
+        },
+        inputs: 1,
+        outputs: 1,
+        label: function () {
+            return this.name || 'dialoqbase';
+        },
+        icon: 'icon.png',
+        align: 'left'
+    });
+</script>
+
+
+<script type="text/x-red" data-template-name="dialoqbaseApiKey">
+    <div class="form-row">
+        <label for="node-input-name"> <i class="fa fa-tag fa-fw"></i> Name</label>
+        <input type="text" id="node-config-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+      <label for="node-config-input-dialoqbase_url"> dialoqbase_url</label>
+      <input type="text" id="node-config-input-dialoqbase_url" placeholder="dialoqbase_url">
+    </div>
+    <div class="form-row">
+      <label for="node-config-input-api_key"> API KEY</label>
+      <input type="text" id="node-config-input-api_key" placeholder="API KEY">
+    </div>
+
+
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('dialoqbaseApiKey', {
+        category: 'config',
+        defaults: {
+            name: {value: ""}
+        },
+        credentials: {
+            dialoqbase_url: {},
+            api_key: {},
+        },
+        label: function () {
+            return this.name || 'API Key';
+        }
+    });
+</script>
+
