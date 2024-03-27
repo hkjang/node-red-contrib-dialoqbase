@@ -18,21 +18,12 @@ command in your Node-RED user directory, typically `~/.node-red`
 
 ## Sample parameters
 ```js
-msg.api = 'chat/completions';
+msg.api = 'bot';
+msg.method = 'post' // get, post, put, delete, default:get
 msg.params = {
-    "model": "gpt-3.5-turbo",
-    "messages": [
-        {
-            "role": "system",
-            "content": "You are a helpful assistant."
-        },
-        {
-            "role": "user",
-            "content": "Hello!"
-        }
-    ],
-    "max_tokens": 7,
-    "temperature": 0
+    name: "Test Bot 2",
+    model: "claude-3-opus-20240229",
+    embedding: "nomic-ai/nomic-embed-text-v1.5"
 }
 return msg;
 ```
